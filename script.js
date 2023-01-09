@@ -144,9 +144,23 @@ function getRandom(arr) {
 }
 
 // Function to generate password with user input
+// depending on user input, the first few elements will match user criteria
 function generatePassword() {
   let password = []
-  for (let i = 0; i < lengthOfPassword; i++) {
+
+  if (upperCaseBool){
+    password.push(getRandom(upperCasedCharacters));
+  }
+  if (specialBool){
+    password.push(getRandom(specialCharacters));
+  }
+  if (lowerCaseBool){
+    password.push(getRandom(lowerCasedCharacters));
+  }
+  if (numbersBool){
+    password.push(getRandom(numericCharacters))
+  }
+  for (let i = password.length; i < lengthOfPassword; i++) {
     password.push(getRandom(options));
   }
   return password.join("")
