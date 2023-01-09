@@ -109,7 +109,6 @@ function getPasswordOptions() {
     if (lowerCaseBool) {
       options.push(lowerCasedCharacters);
     }
-  
     upperCaseBool = confirm("Would you like your password to contain upper case characters?")
     if (upperCaseBool) {
       options.push(upperCasedCharacters);
@@ -122,7 +121,11 @@ function getPasswordOptions() {
     if(numbersBool) {
       options.push(numericCharacters);
     }
-}
+  }
+  if (!numbersBool && !upperCaseBool && !lowerCaseBool && !specialBool){
+    alert("please choose atleast one option");
+    getPasswordOptions();
+  }
 }
 
 
