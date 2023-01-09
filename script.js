@@ -1,5 +1,6 @@
 // Array of special characters to be included in password
 let options = [];
+let lengthOfPassword = 0;
 var specialCharacters = [
   '@',
   '%',
@@ -92,7 +93,7 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
   
-  let lengthOfPassword =parseInt(prompt("How many characters?"));
+  lengthOfPassword =parseInt(prompt("How many characters?"));
   console.log(lengthOfPassword)
   if ( isNaN(lengthOfPassword) || lengthOfPassword < 10 || lengthOfPassword > 64){
     console.log("please enter a number between 10 and 64")
@@ -139,7 +140,6 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-  // depending on userInput, run through each array 
 
 }
 
