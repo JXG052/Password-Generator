@@ -122,7 +122,12 @@ function getPasswordOptions() {
     if(numbersBool) {
       options.push(numericCharacters);
     }
-}
+  }
+  if (!lowerCaseBool && !upperCaseBool && !specialBool && !numbersBool ){
+    alert("You need to choice atleast one option")
+    getPasswordOptions()
+  }
+
 }
 
 
