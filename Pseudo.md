@@ -25,7 +25,8 @@ let newArray = [
     [upper],
     [num],
     [lower]
-}
+]
+if user selects yes - they get pushed to new array
 
 function that gets Random word from (Array){
     if 2d array

@@ -1,5 +1,5 @@
 // Array of special characters to be included in password
-let characterOptions = {}
+let options = [];
 var specialCharacters = [
   '@',
   '%',
@@ -91,7 +91,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  let options = [];
+  
   let lengthOfPassword =parseInt(prompt("How many characters?"));
   console.log(lengthOfPassword)
   if ( isNaN(lengthOfPassword) || lengthOfPassword < 10 || lengthOfPassword > 64){
@@ -117,16 +117,24 @@ function getPasswordOptions() {
       options.push(numericCharacters);
     }
 }
-    console.log("options array:" + options)
-    return options
-  
 }
 
 
 // Function for getting a random element from an array
+// Using if statement to handle 2d array
+
 function getRandom(arr) {
-
-
+  let length = arr.length;
+  let i = Math.floor(Math.random() * length);
+  // check for next level of array
+  let n = arr[i].length;
+  if (n > 0) {
+    let j = Math.floor(Math.random()* n)
+    return arr[i][j]
+  }
+  else {
+    return arr[i];
+  }
 }
 
 // Function to generate password with user input
