@@ -1,4 +1,5 @@
 // Array of special characters to be included in password
+let characterOptions = {}
 var specialCharacters = [
   '@',
   '%',
@@ -90,6 +91,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  let options = [];
   let lengthOfPassword =parseInt(prompt("How many characters?"));
   console.log(lengthOfPassword)
   if ( isNaN(lengthOfPassword) || lengthOfPassword < 10 || lengthOfPassword > 64){
@@ -97,19 +99,39 @@ function getPasswordOptions() {
     getPasswordOptions();
   }
   else {
-  let lowerCaseBool = confirm("Would you like your password to contain lower case characters?")
-  let upperCaseBool = confirm("Would you like your password to contain upper case characters?")
-  let specialBool = confirm("Would you like your password to contain special characters?")
-  }
+    let lowerCaseBool = confirm("Would you like your password to contain lower case characters?");
+    if (lowerCaseBool) {
+      options.push(lowerCasedCharacters);
+    }
+  
+    let upperCaseBool = confirm("Would you like your password to contain upper case characters?")
+    if (upperCaseBool) {
+      options.push(upperCasedCharacters);
+    }
+    let specialBool = confirm("Would you like your password to contain special characters?");
+    if (specialBool) {
+      options.push(specialCharacters);
+    }
+    let numbersBool = confirm("Would you like your password to contain numeric characters?")
+    if(numbersBool) {
+      options.push(numericCharacters);
+    }
 }
+    console.log("options array:" + options)
+    return options
+  
+}
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+
 
 }
 
 // Function to generate password with user input
 function generatePassword() {
+  // depending on userInput, run through each array 
 
 }
 
