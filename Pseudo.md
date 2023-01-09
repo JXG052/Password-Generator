@@ -46,4 +46,5 @@ function that generates a password
         password[i] = getRandom();
         }
     
-    double check that all criteria is met before returning. if not, call function again.
+// double check that all criteria is met before returning. if not, call function again.
+    How? 

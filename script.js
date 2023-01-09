@@ -1,6 +1,11 @@
 // Array of special characters to be included in password
 let options = [];
 let lengthOfPassword = 0;
+let upperCaseBool;
+let lowerCaseBool;
+let numbersBool;
+let specialBool;
+
 var specialCharacters = [
   '@',
   '%',
@@ -100,20 +105,20 @@ function getPasswordOptions() {
     getPasswordOptions();
   }
   else {
-    let lowerCaseBool = confirm("Would you like your password to contain lower case characters?");
+    lowerCaseBool = confirm("Would you like your password to contain lower case characters?");
     if (lowerCaseBool) {
       options.push(lowerCasedCharacters);
     }
   
-    let upperCaseBool = confirm("Would you like your password to contain upper case characters?")
+    upperCaseBool = confirm("Would you like your password to contain upper case characters?")
     if (upperCaseBool) {
       options.push(upperCasedCharacters);
     }
-    let specialBool = confirm("Would you like your password to contain special characters?");
+    specialBool = confirm("Would you like your password to contain special characters?");
     if (specialBool) {
       options.push(specialCharacters);
     }
-    let numbersBool = confirm("Would you like your password to contain numeric characters?")
+    numbersBool = confirm("Would you like your password to contain numeric characters?")
     if(numbersBool) {
       options.push(numericCharacters);
     }
@@ -140,7 +145,11 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  let password = []
+  for (let i = 0; i < lengthOfPassword; i++) {
+    password.push(getRandom(options));
+  }
+  return password.join("")
 }
 
 // Get references to the #generate element
