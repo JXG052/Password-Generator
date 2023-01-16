@@ -19,7 +19,7 @@ n/a
 
 ## Usage
 
-Open Web Page, click generate password and follow the prompts. 
+Open Web Page, click generate password and follow the prompts.
 
 ![image of what the page looks like with password](assets/Screenshot.png)
 

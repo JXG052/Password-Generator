@@ -13,14 +13,13 @@
 
 function that gets a random character from a given array
 
-// How do we know which array to chose?
-
-if boolean lowercase true - push  array to the object
-if boolean uppercase  true - push that array the object
-if boolean special  true - push that array to the object
+    if boolean lowercase true - push  array to the newArray
+    if boolean uppercase  true - push that array the newArray
+    if boolean special  true - push that array to the newArray
 
 based on user inputs
-let newArray = [
+
+newArray = [
     [specialChars],
     [upper],
     [num],
@@ -46,5 +45,4 @@ function that generates a password
         password[i] = getRandom();
         }
     
-// double check that all criteria is met before returning. if not, call function again.
-    How? 
+if userInput has selected. Push first from that array to ensure it is in final password. 

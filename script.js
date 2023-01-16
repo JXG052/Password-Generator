@@ -101,7 +101,7 @@ function getPasswordOptions() {
   lengthOfPassword =parseInt(prompt("How many characters?"));
   console.log(lengthOfPassword)
   if ( isNaN(lengthOfPassword) || lengthOfPassword < 10 || lengthOfPassword > 64){
-    console.log("that wasn't a number between 10 and 64 now was it? 🙄 try again" )
+    prompt("that wasn't a number between 10 and 64 now was it? 🙄 try again" )
     getPasswordOptions();
   }
   else {
