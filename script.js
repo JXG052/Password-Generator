@@ -6,7 +6,7 @@ let lowerCaseBool;
 let numbersBool;
 let specialBool;
 
-var specialCharacters = [
+const specialCharacters = [
   '@',
   '%',
   '+',
@@ -33,10 +33,10 @@ var specialCharacters = [
 ];
 
 // Array of numeric characters to be included in password
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
+const lowerCasedCharacters = [
   'a',
   'b',
   'c',
@@ -66,7 +66,7 @@ var lowerCasedCharacters = [
 ];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
+const upperCasedCharacters = [
   'A',
   'B',
   'C',
@@ -97,11 +97,11 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  
+  // 
   lengthOfPassword =parseInt(prompt("How many characters?"));
   console.log(lengthOfPassword)
   if ( isNaN(lengthOfPassword) || lengthOfPassword < 10 || lengthOfPassword > 64){
-    console.log("please enter a number between 10 and 64")
+    console.log("that wasn't a number between 10 and 64 now was it? 🙄 try again" )
     getPasswordOptions();
   }
   else {
@@ -123,7 +123,7 @@ function getPasswordOptions() {
     }
   }
   if (!numbersBool && !upperCaseBool && !lowerCaseBool && !specialBool){
-    alert("please choose atleast one option");
+    alert("please choose atleast one option, otherwise I can't help you 🥺");
     getPasswordOptions();
   }
 }
