@@ -21,7 +21,7 @@ n/a
 
 Open Web Page, click generate password and follow the prompts.
 
-![image of what the page looks like with password](assets/Screenshot.png)
+![image of what the page looks like with password](assets/screenshot.png)
 
 [Link to deployed page](https://jxg052.github.io/Password-Generator/)
 
